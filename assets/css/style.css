@@ -21,7 +21,7 @@ Tags: html, themplate, angles, jeweltheme, business
 /* 4 - angles Slider 
 /* 5 - Profile Section
 /* 6 - Services Section
-/* 7 - Works Section
+/* 7 - Works Section2449
 /* 8 - Blog Section
 /* 9 - Clients Section
 /* 10 - Contact Section
@@ -87,6 +87,8 @@ p {
 }
 img {
   max-width: 100%;
+  width: 100%;
+  height: 100%;
 }
 a {
   text-decoration: none;
@@ -707,7 +709,7 @@ audio {
   z-index: 2;
 }
 .separator svg {
-  fill: #37474f; 
+  fill: #374b4f;
   height: 20px;
   width: 100%;
   stroke-width:0;
@@ -774,7 +776,7 @@ audio {
   text-align: right;
 }
 .sp-slide.slide-1 {
-  background: url(../../images/slider/1.jpg) top center no-repeat;
+  background: url(../../images/slider/1.png) top center no-repeat;
   background-size: cover; 
 }
 .sp-slide.slide-2 {
@@ -2447,7 +2449,7 @@ audio {
   z-index: 1;
 }
 footer {
-  background: #e8eaf6;
+  background-color: #e8eaf6;
   color: #a6a6a6;
   clear: both;
   font-family: 'Oswald';
@@ -2687,4 +2689,100 @@ PRELOADER STYLING
   .style-switcher .toggle {
     top: 47px;
   }
+}
+
+
+.angles-container .angles-menu-item svg {
+  fill: #26c6da;
+}
+
+.angles-container .angles-heading {
+  color: #26c6da;
+}
+
+.btn {
+  border-color: #26c6da !important;
+  background: #26c6da !important;
+  color: #fff;
+}
+
+.btn:hover {
+  background: #fff !important;
+  border-color: #26c6da !important;
+  color: #26c6da !important;
+}
+
+.download-btn .btn-hover {
+  background-color: #fff;
+  color: #26c6da;
+}
+
+.facts .col-md-3.col-sm-6:hover {
+  border-color: #26c6da;
+}
+
+.skill-details .progress-bar,
+.facts .col-md-3.col-sm-6:hover {
+  background-color: #26c6da;
+}
+
+.pricing-tables .col-md-4.col-sm-6:nth-child(2) .table-title,
+.pricing-tables .col-md-4.col-sm-6:nth-child(2) .pricing-cost,
+.pricing-tables .table:hover .table-title,
+.pricing-tables .table:hover .pricing-cost {
+  background-color: #26c6da;
+  border-color: #e8eaf6;
+}
+
+.pricing-tables .col-md-4.col-sm-6:hover {
+  border-color: #e8eaf6 !important;
+}
+
+.table-bottom .btn,
+.wpcf7-form p.btn {
+  background-color: #fff !important;
+  border: none !important;
+}
+
+.table-bottom .btn:hover {
+  color: #26c6da !important;
+}
+
+.entry-title a:hover {
+  color: #26c6da;
+}
+
+.wpcf7-submit {
+  background: #26c6da;
+  border-color: #26c6da;
+  color: #fff;
+}
+
+.wpcf7-submit:hover {
+  background: #fff;
+  border-color: #26c6da;
+  color: #26c6da;
+}
+
+.back-home .btn {
+  color: #fff;
+}
+
+.btn.reply-btn,
+.btn.read-more {
+  background-color: #fff !important;
+  border: 0;
+  color: #26c6da;
+}
+
+.btn.reply-btn:before,
+.btn.read-more:hover {
+  color: #26c6da;
+}
+
+.tag-list a:hover {
+  background-color: #26c6da;
+}
+.item-title {
+  color: white
 }

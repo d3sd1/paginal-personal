@@ -32,7 +32,7 @@ jQuery(document).ready(function($) {
       }
 
       function menuToggle() {
-        $(".angles-wrapper_page, .main-content, .angles-wrapper_menu").toggleClass("menu-active");
+        $(".angles-wrapper_page, .main-content, .angles-wrapper_menu, .openenu").toggleClass("menu-active");
         $(".js-menuBtn").toggleClass("m--btn");
         $(document).off("click", ".angles-wrapper_content", closeNotFocusedMenu);
       }
@@ -232,78 +232,4 @@ jQuery(document).ready(function($) {
   });
 
 
-
-/* Contact
--------------------------------------------------------------------*/
-jQuery('#submit').click(function(e){ 
-
-    //Stop form submission & check the validation
-    e.preventDefault();
-
-
-    jQuery('.name-error, .email-error, .subject-error, .message-error').hide();
-
-    // Variable declaration
-    var error = false;
-    var k_name = jQuery('#name').val();
-    var k_email = jQuery('#email').val(); 
-    var k_subject = jQuery('#subject').val(); 
-    var k_message = jQuery('#message').val();
-
-    // Form field validation
-    if(k_name.length == 0){
-      var error = true; 
-      jQuery('.name-error').html('<i class="fa fa-exclamation"></i> Name is required.').fadeIn();
-    }  
-
-    if(k_email.length == 0){
-      var error = true; 
-      jQuery('.email-error').html('<i class="fa fa-exclamation"></i> Please enter a valid email address.').fadeIn();
-    }
-
-    if(k_subject.length == 0){
-      var error = true;
-      jQuery('.subject-error').html('<i class="fa fa-exclamation"></i> Subject is required.').fadeIn();
-    } 
-
-    if(k_message.length == 0){
-      var error = true;
-      jQuery('.message-error').html('<i class="fa fa-exclamation"></i> Please provide a message.').fadeIn();
-    }  
-
-    // If there is no validation error, next to process the mail function
-    if(error == false){
-
-      // $('#submit').hide();
-      // $('#contact-loading').fadeIn();
-      // $('.contact-error-field').fadeOut();
-
-
-      // Disable submit button just after the form processed 1st time successfully.
-      //jQuery('#submit').attr({'disabled' : 'true', 'value' : 'Done' });
-
-      /* Post Ajax function of jQuery to get all the data from the submission of the form as soon as the form sends the values to email.php*/
-      jQuery.post("email.php", jQuery(".wpcf7-form").serialize(),function(result){
-        //Check the result set from email.php file.
-        if(result == 'sent'){
-
-
-
-          //If the email is sent successfully, remove the submit button
-          jQuery('#name').remove();
-          jQuery('#email').remove();
-          jQuery('#subject').remove(); 
-          jQuery('#message').remove();
-          jQuery('#submit').remove(); 
-
-          // jQuery('.contact-box-hide').slideUp();
-          //jQuery('.wpcf7-response-output').html('<i class="fa fa-check contact-success"></i><div>Your message has been sent.</div>').fadeIn();
-        } else {
-          //jQuery('.btn-contact-container').hide();
-          //jQuery('.wpcf7-response-output').html('<i class="fa fa-exclamation contact-error"></i><div>Something went wrong, please try again later.</div>').fadeIn();
-          jQuery('.wpcf7-response-output').html('<i class="fa fa-check contact-success"></i><div>Your message has been sent.</div>').fadeIn();
-        }
-      });
-    }
-  });  
 
